@@ -8,8 +8,6 @@
 
 RewriteEngine On
 
-RewriteBase /
-
 RewriteRule ^([a-zA-Z-]+)/?$ index.php?mod=$1
 RewriteRule ^([a-zA-Z-]+)/([a-zA-Z-]+)/?$ index.php?mod=$1&se=$2
 RewriteRule ^([a-zA-Z-]+)/([a-zA-Z-]+)/([0-9]+)/?$ index.php?mod=$1&se=$2&page=$3

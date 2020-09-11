@@ -11,6 +11,7 @@ if (mysql_errno() == 1040 or mysql_errno() == 1203 or mysql_errno() == 2003) {
 	header("Location: " . _URLWEB . "error.php");
 	exit;
 }
+
 require_once "mod/mod.visit.php";
 if ($_SERVER['QUERY_STRING']) {
 	$mod = "home";

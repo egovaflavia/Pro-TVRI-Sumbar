@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>TVRI &mdash; Sumatra Barat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <style>
+    :root {
+      --main-white-color: white;
+      --main-black-color: black;
+    }
+
+    .static {
+      position: static;
+    }
+
+    .cover {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .nav-link {
+      font-family: "Font TVRI" !important;
+      letter-spacing: 1px;
+      font-weight: bolder;
+      color: #1b365d !important;
+    }
+
+    .owl-carousel .owl-slide {
+      position: relative;
+      height: 100vh;
+      background-color: lightgray;
+    }
+
+    .owl-carousel .owl-slide-animated {
+      transform: translateX(20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.05s;
+    }
+
+    .owl-carousel .owl-slide-animated.is-transitioned {
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.5s;
+    }
+
+    .owl-carousel .owl-slide-title.is-transitioned {
+      transition-delay: 0.2s;
+    }
+
+    .owl-carousel .owl-slide-subtitle.is-transitioned {
+      transition-delay: 0.35s;
+    }
+
+    .owl-carousel .owl-slide-cta.is-transitioned {
+      transition-delay: 0.5s;
+    }
+
+    .owl-carousel .owl-dots,
+    .owl-carousel .owl-nav {
+      position: absolute;
+    }
+
+    .owl-carousel .owl-dots .owl-dot span {
+      background: transparent;
+      border: 1px solid var(--main-black-color);
+      transition: all 0.2s ease;
+    }
+
+    .owl-carousel .owl-dots .owl-dot:hover span,
+    .owl-carousel .owl-dots .owl-dot.active span {
+      background: var(--main-black-color);
+    }
+
+    .owl-carousel .owl-nav {
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: "Font TVRI";
+      src: url('fontTVRI.ttf');
+    }
+
+    .a .nav-link {
+      font-family: "Font TVRI" !important;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+
+  <!-- Loading -->
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- End Loading -->
+
+  <div class="site-wrap">
+
+    <!-- Mobile -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <!-- End Mobile -->
+
+    <div class="sticky-wrapper is-sticky">
+      <header class="site-navbar js-sticky-header shrink site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0 text-white"><img class="img-fluid"
+                    style="max-width: 200%;" src="banner/logo.gif" alt="">
+                </a></h1>
+            </div>
+
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="" class="nav-link">Program</a></li>
+                  <li><a href="" class="nav-link">Jadwal TV</a></li>
+                  <li><a href="" class="nav-link">Kontak Kami</a></li>
+                  <li><a href="" class="nav-link"><img style="width: 150px;" src="banner/live.gif" alt=""></a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#"
+                class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+
+      </header>
+    </div>
+
+    <!-- Slider -->
+    <section class="site-blocks-cover overflow-hidden bg-light">
+      <div class="owl-carousel owl-theme">
+        <div class="owl-slide d-flex align-items-center cover" style="background-image: url(banner/bannerTVRI1.jpg);">
+          <div class="container">
+            <div class="row justify-content-center justify-content-md-start">
+              <div class="col-6 col-md-6 offset-md-6 offset-6 ">
+                <div class="owl-slide-text">
+                  <div class="card owl-slide-animated owl-slide-cta" style="opacity: 0.7;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sumatera Barat Hari Ini</h5>
+                      <p class="card-text">Setiap Hari, Pukul 16.00 WIB</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                </div><!-- /owl-slide-text -->
+              </div>
+            </div>
+          </div>
+        </div><!-- /slide1 -->
+        <div class="owl-slide d-flex align-items-center cover" style="background-image: url(banner/bannerTVRI2.jpg);">
+          <div class="container">
+            <div class="row justify-content-center justify-content-md-start">
+              <div class="col-6 col-md-6 offset-md-6 offset-6 ">
+                <div class="owl-slide-text">
+                  <div class="card owl-slide-animated owl-slide-cta" style="opacity: 0.7;">
+                    <div class="card-body">
+                      <h5 class="card-title">Lensa Olahraga</h5>
+                      <p class="card-text">Setiap Minggu, Pukul 08.00 WIB</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                </div><!-- /owl-slide-text -->
+              </div>
+            </div>
+          </div>
+        </div><!-- /slide2 -->
+
+        <!-- two more slides here -->
+      </div>
+      <!-- other sections here -->
+    </section>
+    <!-- End Slider -->
+
+    <!-- Jadwal TV -->
+    <section class="site-section">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center heading-section mb-5">
+            <h2 class="text-black mb-2">Jadwal TV</h2>
+            <p>Televisi Nasional, ‎Media Pemersatu Bangsa</p>
+          </div>
+        </div>
+
+        <div class="row hover-1-wrap mb-5 mb-lg-0">
+          <div class="col-12">
+            <div class="row">
+              <div class="mb-4 mb-lg-0 col-lg-6 order-lg-2" data-aos="fade-right">
+                <table class="table table-bordered table-striped">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Hari ini</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>00.00 &mdash; Lensa Olahraga</td>
+                    </tr>
+                    <tr>
+                      <td>02.00 &mdash; Sumatera Barat Hari Ini</td>
+                    </tr>
+                    <tr>
+                      <td>04.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>05.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>06.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>07.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>07.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>07.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>07.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                    <tr>
+                      <td>07.00 &mdash; Lorem ipsum dolor sit amet consec</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-lg-5 mr-auto text-lg-right align-self-center order-lg-1" data-aos="fade-left">
+                <h2 class="text-black">Lensa Olahraga <br> <span class="icon-clock-o"></span> 00.00 &mdash; 02.00</h2>
+                <img class="img-fluid" style="width: 300px;" src="images/person_2.jpg" alt="No Image">
+
+                <p class="mb-4">
+                  Cerita unik dan menarik yang dikemas dalam cerita komedi romantis yang fresh dan menarik untuk
+                  diikuti. Dibintangi oleh artis-artis ternama Indonesia.
+                </p>
+                <p><a href="#" class="btn btn-primary">Read More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Jadwal TV -->
+
+    <!-- Program Acara -->
+    <section class="site-section trainers" id="trainers-section">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-7 text-center heading-section mb-5">
+            <h2 class="mb-2 text-black heading">Program Acara</h2>
+            <p>Televisi Nasional, ‎Media Pemersatu Bangsa</p>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="trainer">
+              <figure>
+                <img src="images/program1.jpg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="px-md-3">
+                <h3>Jessica White</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                  the blind texts.</p>
+                <ul class="ul-social-circle">
+                  <li><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li><a href="#"><span class="icon-instagram"></span></a></li>
+                  <li><a href="#"><span class="icon-facebook"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="trainer">
+              <figure>
+                <img src="images/program2.jpg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="px-md-3">
+                <h3>Valerie Elash</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                  the blind texts.</p>
+                <ul class="ul-social-circle">
+                  <li><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li><a href="#"><span class="icon-instagram"></span></a></li>
+                  <li><a href="#"><span class="icon-facebook"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="trainer">
+              <figure>
+                <img src="images/program3.jpg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="px-md-3">
+                <h3>Alicia Jones</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                  the blind texts.</p>
+                <ul class="ul-social-circle">
+                  <li><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li><a href="#"><span class="icon-instagram"></span></a></li>
+                  <li><a href="#"><span class="icon-facebook"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Program Acara -->
+
+    <!-- Berita -->
+    <section class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center heading-section mb-5">
+            <h2 class="text-black mb-2">News</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%; height: 200px;" src="images/slider1.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                </div>
+                <div class="col-md-12">
+                  <div class="blog-entry-text">
+                    <h3><a href="single.html">5 Things You Need To Know About Dog Massage</a></h3>
+                    <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live
+                      the blind texts.</p>
+                    <p><a href="#" class="">Read More..</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%; height: 200px;" src="images/slider2.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                </div>
+                <div class="col-md-12">
+                  <div class="blog-entry-text">
+                    <h3><a href="single.html">5 Things You Need To Know About Dog Massage</a></h3>
+                    <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live
+                      the blind texts.</p>
+                    <p><a href="#" class="">Read More..</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%; height: 200px;" src="images/slider3.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                </div>
+                <div class="col-md-12">
+                  <div class="blog-entry-text">
+                    <h3><a href="single.html">5 Things You Need To Know About Dog Massage</a></h3>
+                    <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live
+                      the blind texts.</p>
+                    <p><a href="#" class="">Read More..</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Berita -->
+
+    <!-- Gallery -->
+    <!-- <section class="site-section" id="gallery-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center heading-section mb-5">
+            <h2 class="text-black mb-2">Photo Gallery</h2>
+          </div>
+        </div>
+        <div class="row no-gutters">
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_1.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019100227rebranding-(3).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_2.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019095946rebranding-(23).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_3.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019095501rebranding-(4).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_4.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019095104rebranding-(7).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_5.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019095228rebranding-(6).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_6.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019095327rebranding-(5).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_1.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019094234rebranding-(10).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_2.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019094451rebranding-(9).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_3.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019094601rebranding-(8).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_4.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019093929rebranding-(14).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_5.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019094011rebranding-(13).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100"
+            href="images/dogger_img_sm_6.jpg" data-fancybox="gal"><img style="width: 100%;"
+              src="http://tvrisumbar.co.id/up/foto/crop_08052019093825rebranding-(15).jpg.jpg" alt="Image"
+              class="img-fluid"></a>
+
+        </div>
+      </div>
+    </section> -->
+    <!-- End Gallery -->
+
+    <!-- Instagram -->
+    <section class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center heading-section mb-5">
+            <h2 class="text-black mb-2">Instagram</h2>
+            <p>Berita seputar Sumatera Barat</p>
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%;height: 200px;" src="images/slider1.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                  <div class="col-md-12">
+                    <div class="blog-entry-text">
+                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%;height: 200px;" src="images/slider2.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                  <div class="col-md-12">
+                    <div class="blog-entry-text">
+                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="d-lg-flex blog-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <figure class="mr-4">
+                    <a href="single.html"><img style="width: 100%;height: 200px;" src="images/slider3.jpg" alt="Image"
+                        class="img-fluid"></a>
+                  </figure>
+                  <div class="col-md-12">
+                    <div class="blog-entry-text">
+                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Instagram -->
+
+    <!-- Map -->
+    <section class="site-section">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6 text-center heading-section mb-3">
+          <h2 class="text-black">Lokasi Kami</h2>
+          <p>TVRI Sumatera Barat</p>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15957.453470040351!2d100.3763871!3d-0.8652635!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3a485651e4ae9c99!2sTVRI%20Sumbar!5e0!3m2!1sid!2sid!4v1599461339593!5m2!1sid!2sid"
+        width="100%" height="600"></iframe>
+    </section>
+    <!-- End Map -->
+
+  </div>
+  <!-- .site-wrap -->
+  <!-- Footer -->
+  <!-- <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-5">
+              <div align="center">
+                <center>
+                  <img class="img-fluid" src="images/logobaru.jpg" alt="">
+                </center>
+              </div>
+              <p class="text-center">TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT</p>
+              <p class="text-center" style="font-size: 10px;">Jl. By Pass Km.16 Koto Panjang, Padang <br>
+                Telp: (0751)
+                463131, 463132, 463133 - Fax: (0751) 463130 <br> Email: humas@tvrisumbar.co.id</p>
+            </div>
+            <div class="col-md-3 ml-auto">
+              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                <li><a href="#trainers-section" class="smoothscroll">Trainers</a></li>
+                <li><a href="#services-section" class="smoothscroll">Services</a></li>
+                <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-heading mb-4">Follow Us</h2>
+              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+          <form action="#" method="post" class="footer-subscribe">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control border-secondary text-white bg-transparent"
+                placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5  text-center">
+        <div class="col-md-12">
+          <div class="border-top pt-5">
+            <p class="copyright text-white"><small>
+                Copyright &copy; 2015 -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script> TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT by <a
+                  href="https://instagram.com/egovaflavia" target="_blank">egova</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer> -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img style="width: 170px;height: 100px;" class="img-fluid" src="images/logobaru.jpg" alt="">
+        </div>
+        <div class="col-md-5">
+
+          <p class="text-justify">
+            TVRI Stasiun Sumatra Barat terletak di Jalan Raya By pass KM 16 Koto Panjang, Padang. TVRI Stasiun Sumatera
+            Barat
+            Diresmikan pada 19 April 1997. TVRI Sumatera Barat mengudara secara konsisten selama 4 jam setiap harinya.
+          </p>
+          <div class="row">
+            <div class="col-md-12">
+              <span class="fa fa-instagram mr-4"></span>
+              <span class="fa fa-facebook mr-4"></span>
+              <span class="fa fa-youtube mr-4"></span>
+              <span class="fa fa-tumblr mr-4"></span>
+              <span class="fa fa-google mr-4"></span>
+              <span class="fa fa-telegram mr-4"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;"
+            class="h4 text-primary mr-3">Program</a>
+          <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;"
+            class="h4 text-primary mr-3">Jadwal TV</a>
+          <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;"
+            class="h4 text-primary mr-3">Kontak Kami</a>
+          <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;"
+            class="h4 text-primary mr-3"><img style="width: 150px;" src="banner/live.gif" alt=""></a>
+        </div>
+      </div>
+
+      <div class="row  text-center">
+        <div class="col-md-12">
+          <div class="border-top ">
+            <p class="copyright"><small>
+                Copyright © 2015
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const $owlCarousel = $(".owl-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      nav: false,
+      navText: [
+        '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+        '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
+      ]
+    });
+
+    $($owlCarousel).on("changed.owl.carousel", e => {
+      $(".owl-slide-animated").removeClass("is-transitioned");
+      const $currentOwlItem = $(".owl-item").eq(e.item.index);
+      $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
+    });
+
+    /*you have to bind initialized event before owl's initialization (see demo) */
+    $(".owl-carousel").on("initialized.owl.carousel", () => {
+      setTimeout(() => {
+        $(".owl-item.active .owl-slide-animated").addClass("is-transitioned");
+      }, 200);
+    });
+  </script>
+</body>
+
+</html>

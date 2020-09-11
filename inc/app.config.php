@@ -22,9 +22,12 @@ define('_DBNAME', 'db_tvri');
 define('_APPNAME', 'stv-1.0.0');
 define('_ADMINNAME', 'Studio Online');
 define('_APPVENDOR', 'Syalim.Com');
+date_default_timezone_set('Asia/Jakarta');
+// var_dump(date('Y'));
+// exit;
 define('_APPCPR', '&copy; 2015 - ' . date('Y'));
 // define('_URLWEB', 'http://tvrisumbar.co.id/'); //Gunakan garis miring diakhir nama domain
-define('_URLWEB', 'http://localhost/TVRI/'); //Gunakan garis miring diakhir nama domain
+define('_URLWEB', 'http://localhost/MyProject/TVRI/'); //Gunakan garis miring diakhir nama domain
 
 //konfigurasi tabel
 define('_TBACARA', 'acaratb');
