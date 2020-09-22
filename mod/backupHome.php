@@ -155,8 +155,7 @@
                 <a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>"><img src="<?= $imgtkn; ?>" width="140" height="140" alt="" border="0" /></a>
               </div>
               <div class="berita-home-b">
-                <p class="tgl-berita-home"><a href="<?php echo _URLWEB; ?>berita"><b><?= $kanaltkn->nama; ?></b></a><img src="<?php echo _URLWEB; ?>img/jam10.png" width="10" height="10" alt="" border="0" style="padding:0px 4px 0px 10px;" /><?php $tanggal->contanggalx(substr($rowterkini->tgl_jam, 8, 2), substr($rowterkini->tgl_jam, 5, 2), substr($rowterkini->tgl_jam, 0, 4));
-                                                                                                                                                                                                                                            echo " " . substr($rowterkini->tgl_jam, 11, 5) . " WIB"; ?></p>
+                <p class="tgl-berita-home"><a href="<?php echo _URLWEB; ?>berita"><b><?= $kanaltkn->nama; ?></b></a><img src="<?php echo _URLWEB; ?>img/jam10.png" width="10" height="10" alt="" border="0" style="padding:0px 4px 0px 10px;" /><?php $tanggal->contanggalx(substr($rowterkini->tgl_jam, 8, 2), substr($rowterkini->tgl_jam, 5, 2), substr($rowterkini->tgl_jam, 0, 4)); echo " " . substr($rowterkini->tgl_jam, 11, 5) . " WIB"; ?></p>
                 <p class="judul-berita-home"><a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>"><?= $rowterkini->judul; ?></a></p>
                 <p class="konten-berita-home"><?= $rowterkini->ringkasan; ?></p>
               </div>

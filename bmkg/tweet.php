@@ -1,1 +1,2 @@
-<a class="twitter-timeline" data-width="300" data-height="300" href="https://twitter.com/tvrisumbar?ref_src=twsrc%5Etfw">Tweets by tvrisumbar</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<a class="twitter-timeline" data-width="100%" data-height="300px" href="https://twitter.com/tvrisumbar?ref_src=twsrc%5Etfw">Tweets by tvrisumbar</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

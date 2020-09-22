@@ -75,7 +75,7 @@ if (file_exists($mohe)) {
 
   </head>
 
-  <body>
+  <body> 
     <div id="main">
         <div id="playerElement" style="width:640px; height:380px; padding:0"></div>
     </div>

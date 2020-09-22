@@ -103,6 +103,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       transition-delay: 0.5s;
     }
 
+    /* 
     .owl-carousel .owl-dots,
     .owl-carousel .owl-nav {
       position: absolute;
@@ -117,11 +118,11 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
     .owl-carousel .owl-dots .owl-dot:hover span,
     .owl-carousel .owl-dots .owl-dot.active span {
       background: var(--main-black-color);
-    }
+    } */
 
     .owl-carousel .owl-nav {
       left: 50%;
-      top: 10%;
+      top: -15%;
       transform: translateX(-50%);
       margin: 0;
     }
@@ -137,4 +138,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
   </style>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+
 </head>
