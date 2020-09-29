@@ -84,7 +84,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
                     </div>
                   </li>
                   <li><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></li>
-                  <li><a href="" class="nav-link">Kontak Kami</a></li>
+                  <li><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></li>
                   <li><a href="stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></li>
                 </ul>
               </nav>

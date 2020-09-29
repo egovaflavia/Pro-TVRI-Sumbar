@@ -84,7 +84,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 										</div>
 									</li>
 									<li><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></li>
-									<li><a href="" class="nav-link">Kontak Kami</a></li>
+									<li><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></li>
 									<li><a href="stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></li>
 								</ul>
 							</nav>
@@ -101,7 +101,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 		<br>
 
-		<section class="site-section" id="blog-section">
+		<section class="site-section" style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame8.png">
 			<div class="container">
 				<div class="row justify-content-center" data-aos="fade-up">
 					<div class="col-lg-6 text-center heading-section mb-5">
@@ -109,19 +109,27 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 						<?php
 						if (strtolower($_GET['se']) == 'entertainment') {
 							$warna = '521b6c';
+							$text = 'Entertainment';
 						} elseif (strtolower($_GET['se']) == 'kid') {
 							$warna = 'd2571c';
+							$text = 'Kid';
 						} elseif (strtolower($_GET['se']) == 'news') {
 							$warna = '0e55a5';
+							$text = 'News';
 						} elseif (strtolower($_GET['se']) == 'culture') {
 							$warna = '05683a';
+							$text = 'Culture';
 						} elseif (strtolower($_GET['se']) == 'sport') {
 							$warna = '9e0b11';
+							$text = 'Sport';
 						} elseif (strtolower($_GET['se']) == 'life') {
 							$warna = '05683a';
+							$text = 'Life';
+						} else {
+							$text = 'Detail Program Acara';
 						}
 						?>
-						<p style="font-size: 15px; color: #<?= $warna ?>; font-weight: bold;"><?php echo ($_GET['se']); ?></p>
+						<p style="font-size: 15px; color: #<?= $warna ?>; font-weight: bold;"><?php echo $text ?></p>
 					</div>
 				</div>
 				<div class="row">
@@ -133,12 +141,9 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 						if (isset($_GET['id'])) {
 							$id = $_GET['id'];
-
 							$cekid = $akdb->dbobject("SELECT COUNT(*) as num FROM " . _TBPROGRAM . " WHERE id_pg='$id'");
-
 							if ($cekid->num <= 0) {
-
-								echo "";
+								echo "Belum di Publikasikan";
 							} else {
 
 								$sqldetil = $akdb->dbobject("SELECT * FROM " . _TBPROGRAM . " WHERE id_pg ='$id' ORDER BY id_pg DESC LIMIT 1");
@@ -147,7 +152,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 								$hitdbx = $akdb->dbquery("UPDATE " . _TBPROGRAM . " SET hit='$newhit' WHERE id_pg='$id' LIMIT 1");
 
 								if ($sqldetil->foto <> '') {
-									$imgdetil = "<div id=\"foto-detil\" align=\"center\"><img src=\"" . _URLWEB . "up/program/" . $sqldetil->foto . "\" class=\"img-konten\" alt=\"$sqldetil->nama\"></div>";
+									$imgdetil = "<div id=\"foto-detil\" align=\"center\"><img src=\"" . _URLWEB . "up/program/" . $sqldetil->foto . "\" class=\"img-fluid\" alt=\"$sqldetil->nama\"></div>";
 								} else {
 									$imgdetil = "";
 								}
@@ -158,42 +163,57 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 					?>
 
 								<!-- box detil -->
-								<div id="box-home-b">
-									<div class="judul-big-content"><span class="judul-mod bg-blue">Program Detil</span></div>
+								<div class="row">
+									<div class="col-md-8">
+										<div class="card">
+											<div class="card-body">
+												<h2 class="text-black mb-2"><?= $sqldetil->nama; ?></h2>
+												<p>
+													<?= $sqldetil->jadwal ?>
+												</p>
+												<?php if ($sqldetil->subjudul <> '') {
+													echo "<div class=\"judul-sub\">$sqldetil->subjudul</div>";
+												} ?>
 
-									<div class="mp-detil"><a href="<?= _URLWEB; ?>"><img src="<?= _URLWEB; ?>img/home-16.png" width="16" height="16" style="float:left;padding-right:10px;"></a> <a href="<?php echo _URLWEB; ?>program">Program Acara</a> > <a href="<?= _URLWEB; ?>program/<?= strtolower($sqldetil->kat); ?>">Program <?= ucwords($sqldetil->kat); ?></a></div>
-									<div class="tgl-detil"><img src="<?php echo _URLWEB; ?>img/jam10.png" width="10" height="10" alt="" border="0" style="padding:0px 4px 0px 0px;" /><?php echo $sqldetil->jadwal; ?></div>
-									<div class="judul-detil"><?= $sqldetil->nama; ?></div>
-									<?php if ($sqldetil->video <> '') {
-										echo "<div style=\"margin-bottom: 15px;\"><iframe width=\"610\" height=\"480\" src=\"http://www.youtube.com/embed/" . $sqldetil->video . "\" frameborder=\"0\" allowfullscreen=\"false\"></iframe></div>";
-									} else {
-										echo $imgdetil;
-									} ?>
-									<div style="float:left;width:75%;">
-										<p class="ed-detil">Update : <?php $tanggal->contanggalx(substr($sqldetil->tgl_jam, 8, 2), substr($sqldetil->tgl_jam, 5, 2), substr($sqldetil->tgl_jam, 0, 4)); ?></p>
-									</div>
-									<div style="float:right; width:25%;" align="right">
-										<a href="#" class="increaseFont">A+</a><a href="#" class="resetFont">AA</a><a href="#" class="decreaseFont">A-</a>
-									</div>
-									<div class="clear">&nbsp;</div>
+												<?= $imgdetil; ?>
+												<br>
+												<div style="float:left;width:75%;">
+													<p class="ed-detil"> </p>
+												</div>
+												<div style="float:right; width:25%;" align="right">
+													<a href="" class="increaseFont">A+</a><a href="" class="resetFont">AA</a><a href="" class="decreaseFont">A-</a>
+												</div>
+												<div class="clear">&nbsp;</div>
 
-									<div class="isi-detil"><?php echo $sqldetil->isi; ?></div>
+												<div class="isi-detil"><?php echo $sqldetil->isi; ?></div>
 
-									<div style="float:left; width:50%;">
-										<?php
-										$bas = 'mod/bas.php';
-										if (file_exists($bas)) {
-											include_once "$bas";
-										} else {
-											echo "";
-										}
-										?>
+												<div class="card" style="float:left; width:50%;">
+													<?php
+													$bas = 'mod/bas.php';
+													if (file_exists($bas)) {
+														include_once "$bas";
+													} else {
+														echo "Belum di Publikasikan";
+													}
+													?>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div style="float:right; width:50%;" align="right">
-										<a class="button" style="margin-top: -5px;" href="<?php echo _URLWEB; ?>program" /><span>Program Lainnya</span></a>
+									<div class="col-md-4">
+										<div class="card">
+											<div class="card-body">
+												<?php
+												$moki = 'mod/moki.php';
+												if (file_exists($moki)) {
+													include_once "$moki";
+												} else {
+													echo "Belum di Publikasikan";
+												}
+												?>
+											</div>
+										</div>
 									</div>
-									<div class="clear"></div>
-
 								</div>
 								<!-- box detil -->
 
@@ -223,16 +243,25 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 							<!-- Awal Perulangan -->
 							<div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
-								<div class="d-lg-flex blog-entry">
-									<figure class="mr-4">
-										<a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>	"><img src="<?= $imgse; ?>" alt="Image" class="img-fluid"></a>
-									</figure>
-									<div class="blog-entry-text">
-										<h3><a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>"><?= substr($rowse->nama, 0, 45); ?></a></h3>
-										<span class="post-meta mb-3 d-block"><?= $rowse->jadwal ?></span>
-										<p><?= substr($rowse->isi, 0, 70); ?>...</p>
+								<div class="card">
+									<div class="card-body">
+										<div class="d-lg-flex blog-entry">
+											<figure class="mr-4">
+												<a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>"><img src="<?= $imgse; ?>" alt="Image" class="img-fluid"></a>
+											</figure>
+											<div class="blog-entry-text">
+												<h3><a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>"><?= substr($rowse->nama, 0, 45); ?></a></h3>
 
-										<p><a href="#" class="">Read More</a></p>
+												<a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>">
+													<p class="text-black mb-3 d-block"><?= $rowse->jadwal ?></p>
+												</a>
+												<a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>">
+													<p><?= ($rowse->isi == '') ? 'Data tidak di temukan' : substr($rowse->isi, 0, 50) . '...' ?></p>
+												</a>
+
+												<p><a href="<?php echo _URLWEB . "program/detil/$rowse->id_pg/" . strtolower(str_replace(" ", "-", $namase41)) . ".html"; ?>" class="">Read More</a></p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -242,15 +271,8 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 						}
 						?>
 
+					<?php } ?>
 				</div>
-				<!-- box detil -->
-
-			<?php
-
-					} else
-
-			?>
-
 
 			</div>
 	</div>
@@ -258,5 +280,5 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 
 	<?php
-include 'footer.php'
+	include 'footer.php'
 	?>

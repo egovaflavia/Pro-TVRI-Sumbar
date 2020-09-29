@@ -29,7 +29,7 @@ if ($_SERVER['QUERY_STRING']) {
         include_once("mod/home.php");
     } else {
         echo "<center><div style=\"background-color: #dadada; margin-top: 180px; color:#515151; 
-		width: 340px; font-family: Verdana, Arial, Helvetica, sans-serif; text-shadow: 1px 1px #fff; 
+		width: 340px; font-family: Font TVRI, sans-serif; text-shadow: 1px 1px #fff; 
 		border-bottom: 8px solid #919191; font-size: 12px; padding: 20px;\">Sistem gagal mengakses modul <b>HOME</b>
 		<br><br>Silahkan coba lagi dilain waktu, dan<br><b>Terima kasih untuk akses anda.</b><p>&nbsp;</p>
 		<p align=\"center\"><a href=\"javascript:history.back();\">

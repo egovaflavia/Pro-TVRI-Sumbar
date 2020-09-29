@@ -40,7 +40,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 	<br>
 
 	<!-- News Slide -->
-	<section class="site-section block-13" id="testimonials-section" data-aos="fade">
+	<section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame8.png" class="site-section block-13" id="testimonials-section" data-aos="fade">
 		<div class="container">
 
 			<div class="row justify-content-center" data-aos="fade-up">
@@ -103,47 +103,54 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 								<div class="row">
 									<div class="col-md-8">
-										<h2 class="text-black mb-2"><?= $sqldetil->judul; ?></h2>
-										<p>
-											<?= $mediadetil->nama; ?> &bull; <?= $wldetil->nama; ?><img src="<?php echo _URLWEB; ?>img/jam10.png" width="10" height="10" alt="" border="0" style="padding:0px 4px 0px 10px;" /><?php $tanggal->contanggalx(substr($sqldetil->tgl_jam, 8, 2), substr($sqldetil->tgl_jam, 5, 2), substr($sqldetil->tgl_jam, 0, 4));
-																																																								echo " - " . substr($sqldetil->tgl_jam, 11, 5) . " WIB"; ?>
-										</p>
-										<?php if ($sqldetil->subjudul <> '') {
-											echo "<div class=\"judul-sub\">$sqldetil->subjudul</div>";
-										} ?>
+										<div class="card">
+											<div class="card-body">
+												<h2 class="text-black mb-2"><?= $sqldetil->judul; ?></h2>
+												<p><?= $mediadetil->nama; ?> &bull; <?= $wldetil->nama; ?><img src="<?php echo _URLWEB; ?>img/jam10.png" width="10" height="10" alt="" border="0" style="padding:0px 4px 0px 10px;" /><?php $tanggal->contanggalx(substr($sqldetil->tgl_jam, 8, 2), substr($sqldetil->tgl_jam, 5, 2), substr($sqldetil->tgl_jam, 0, 4));
+																																																										echo " - " . substr($sqldetil->tgl_jam, 11, 5) . " WIB"; ?>
+												</p>
+												<?php if ($sqldetil->subjudul <> '') {
+													echo "<div class=\"judul-sub\">$sqldetil->subjudul</div>";
+												} ?>
 
-										<?= $imgdetil; ?>
-										<br>
-										<div style="float:left;width:75%;">
-											<p class="ed-detil">Reporter : <?= $sqldetil->wartawan; ?> &bull; Editor : <?= $admdetil->nama; ?></p>
-										</div>
-										<div style="float:right; width:25%;" align="right">
-											<a href="" class="increaseFont">A+</a><a href="" class="resetFont">AA</a><a href="" class="decreaseFont">A-</a>
-										</div>
-										<div class="clear">&nbsp;</div>
+												<?= $imgdetil; ?>
+												<br>
+												<div style="float:left;width:75%;">
+													<p class="ed-detil">Reporter : <?= $sqldetil->wartawan; ?> &bull; Editor : <?= $admdetil->nama; ?></p>
+												</div>
+												<div style="float:right; width:25%;" align="right">
+													<a href="" class="increaseFont">A+</a><a href="" class="resetFont">AA</a><a href="" class="decreaseFont">A-</a>
+												</div>
+												<div class="clear">&nbsp;</div>
 
-										<div class="isi-detil"><?php echo $sqldetil->isi; ?></div>
+												<div class="isi-detil"><?php echo $sqldetil->isi; ?></div>
 
-										<div style="float:left; width:50%;">
-											<?php
-											$bas = 'mod/bas.php';
-											if (file_exists($bas)) {
-												include_once "$bas";
-											} else {
-												echo "";
-											}
-											?>
+												<div style="float:left; width:50%;">
+													<?php
+													$bas = 'mod/bas.php';
+													if (file_exists($bas)) {
+														include_once "$bas";
+													} else {
+														echo "";
+													}
+													?>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="col-md-4">
-										<?php
-										$moki = 'mod/moki.php';
-										if (file_exists($moki)) {
-											include_once "$moki";
-										} else {
-											echo "";
-										}
-										?>
+										<div class="card">
+											<div class="card-body">
+												<?php
+												$moki = 'mod/moki.php';
+												if (file_exists($moki)) {
+													include_once "$moki";
+												} else {
+													echo "";
+												}
+												?>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -159,7 +166,8 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 	</section>
 	<!-- Program Slide -->
 
-	<section class="site-section bg-light block-13" id="testimonials-section" data-aos="fade">
+	<!-- News -->
+	<section class="site-section block-13" id="testimonials-section" data-aos="fade">
 		<div class="container">
 
 			<div class="row justify-content-center" data-aos="fade-up">
@@ -205,29 +213,17 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 							}
 
 					?>
-							<div class="" style="margin-right: 2px;">
-								<div class="" data-aos="fade-up" data-aos-delay="">
-									<div class="d-lg-flex blog-entry">
-										<div class="row">
-											<div class="col-md-12">
-												<figure class="">
-													<a href="#"><img style="width: 100%; height: 200px;" src="<?php echo _URLWEB . 'up/berita/' . $rowterkini->foto ?>" alt="Image" class="img-fluid"></a>
-												</figure>
-											</div>
-											<div class="col-md-12">
-												<div class="blog-entry-text">
-													<h3><a href="#"><?= $rowterkini->judul ?></a></h3>
-													<span class="post-meta mb-3 d-block"><?php $tanggal->contanggalx(substr($rowterkini->tgl_jam, 8, 2), substr($rowterkini->tgl_jam, 5, 2), substr($rowterkini->tgl_jam, 0, 4));
-																							echo " " . substr($rowterkini->tgl_jam, 11, 5) . " WIB"; ?></span>
-													<p>
-														<?= substr($rowterkini->isi, 0, 150) ?>....
-													</p>
-													<p><a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>">Read
-															More..</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
+							<div class="card m-2">
+								<a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>">
+									<img style="height: 12em;" class="card-img-top" src="<?= _URLWEB . 'up/berita/' . $rowterkini->foto ?>" alt="No Image"></a>
+								<div class="card-body">
+									<a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>">
+										<h5 class="card-title text-black"><?= $rowterkini->judul ?></h5>
+									</a>
+									<p class="card-text"><span class="post-meta mb-3 d-block"><?php $tanggal->contanggalx(substr($rowterkini->tgl_jam, 8, 2), substr($rowterkini->tgl_jam, 5, 2), substr($rowterkini->tgl_jam, 0, 4));
+																								echo " " . substr($rowterkini->tgl_jam, 11, 5) . " WIB"; ?></span>
+										<p></p>
+										<a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>" class="btn btn-primary">&mdash; Selengkapnya</a>
 								</div>
 							</div>
 						<?php
@@ -242,6 +238,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 			</div>
 		</div>
 	</section>
+	<!-- News -->
 
 
 	<?php
