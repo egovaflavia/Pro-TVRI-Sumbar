@@ -14,7 +14,10 @@ RewriteRule ^([a-zA-Z-]+)/([a-zA-Z-]+)/([0-9]+)/?$ index.php?mod=$1&se=$2&page=$
 RewriteRule ^([a-zA-Z-]+)/([0-9]+)/?$ index.php?mod=$1&page=$2
 RewriteRule ^([berita]+)/([cari]+)/([a-zA-Z0-9-.,<>"&!]+)/?$ index.php?mod=$1&se=$2&cari=$3
 RewriteRule ^([berita]+)/([cari]+)/([a-zA-Z0-9-.,<>"&!]+)/([0-9]+)/?$ index.php?mod=$1&se=$2&cari=$3&page=$4
+
+# akses berita detail
 RewriteRule ^([a-zA-Z-]+)/([a-zA-Z]+)/([0-9]+)/([a-zA-Z0-9-.,_<>()?:"'&!]+)\.html$ index.php?mod=$1&se=$2&id=$3&judul=$4
+
 RewriteRule ^([a-zA-Z-]+)/([a-zA-Z]+)/([0-9]+)/([a-zA-Z0-9-.,_<>()?:"'&!]+)\.html/([0-9]+)/?$ index.php?mod=$1&se=$2&id=$3&judul=$4&p=$5
 
 </IfModule>

@@ -12,12 +12,12 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <img style="width: 170px;height: 100px;" class="img-fluid" src="images/logobaru.jpg" alt="">
+      <div class="col-md-12" data-aos="fade-up">
+        <img style="width: 170px;height: 100px;" class="img-fluid" src="<?php echo _URLWEB; ?>cssMediatama/images/logobaru.jpg" alt="">
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" data-aos="fade-up">
 
-        <p class="text-justify">
+        <p class="text-justify" style="font-family: Arial, Helvetica, sans-serif !important;">
           TVRI Stasiun Sumatra Barat terletak di Jalan Raya By pass KM 16 Koto Panjang, Padang. TVRI Stasiun Sumatera
           Barat
           Diresmikan pada 19 April 1997. TVRI Sumatera Barat mengudara secara konsisten selama 4 jam setiap harinya.
@@ -33,11 +33,24 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
           </div>
         </div>
       </div>
-      <div class="col-md-7">
-        <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class="h4 text-primary mr-3">Program</a>
-        <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class="h4 text-primary mr-3">Jadwal TV</a>
-        <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class="h4 text-primary mr-3">Kontak Kami</a>
-        <a style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class="h4 text-primary mr-3"><img style="width: 150px;" src="banner/live.gif" alt=""></a>
+      <div class="col-md-7" data-aos="fade-down">
+        <div style="display: inline-block;" class="dropdown nav-link  text-primary mr-4">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Program
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
+            <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
+            <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/culture">Culture</a>
+            <a class="dropdown-item" style="color: #d2571c" href="<?php echo _URLWEB; ?>program/kid">Kid</a>
+            <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
+            <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/life">Life</a>
+          </div>
+        </div>
+        <a href="<?php echo _URLWEB; ?>home#jadwal" style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class=" text-primary mr-4">Jadwal TV</a>
+        <a href="<?php echo _URLWEB; ?>tentang" style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class=" text-primary mr-4">Tentang Kami</a>
+        <a href="<?php echo _URLWEB; ?>stream"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a>
+
       </div>
     </div>
 
@@ -45,7 +58,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       <div class="col-md-12">
         <div class="border-top ">
           <p class="copyright"><small>
-              Copyright © 2015
+              COPYRIGHT © 2015
               <script>
                 document.write(new Date().getFullYear());
               </script>
@@ -75,13 +88,14 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
 <script src="<?php echo _URLWEB; ?>cssMediatama/js/main.js"></script>
 
 <script>
-  const $owlCarousel = $(".owl-carousel").owlCarousel({
+  const $owlCarousel = $("#owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     nav: false,
+    autoplay: true,
     navText: [
-      '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
-      '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
+      '<svg width="100" height="100" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+      '<svg width="100" height="100" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
     ]
   });
 

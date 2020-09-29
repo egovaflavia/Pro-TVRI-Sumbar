@@ -27,7 +27,7 @@ date_default_timezone_set('Asia/Jakarta');
 // exit;
 define('_APPCPR', '&copy; 2015 - ' . date('Y'));
 // define('_URLWEB', 'http://tvrisumbar.co.id/'); //Gunakan garis miring diakhir nama domain
-define('_URLWEB', 'http://localhost/MyProject/TVRI/'); //Gunakan garis miring diakhir nama domain
+define('_URLWEB', 'http://localhost/MyNative/TVRI/'); //Gunakan garis miring diakhir nama domain
 
 //konfigurasi tabel
 define('_TBACARA', 'acaratb');

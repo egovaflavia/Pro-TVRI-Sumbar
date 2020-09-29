@@ -21,6 +21,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="<?php echo _URLWEB; ?>cssMediatama/images/favicon.png" type="image/x-icon">
   <title>TVRI &mdash; Sumatra Barat</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,6 +47,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/style.css">
 
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/owl.theme.default.min.css">
 
   <style>
@@ -64,11 +66,8 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       background-repeat: no-repeat;
     }
 
-    .nav-link {
+    * {
       font-family: "Font TVRI" !important;
-      letter-spacing: 1px;
-      font-weight: bolder;
-      color: #1b365d !important;
     }
 
     .owl-carousel .owl-slide {
@@ -103,12 +102,13 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       transition-delay: 0.5s;
     }
 
+
     .owl-carousel .owl-dots,
     .owl-carousel .owl-nav {
       position: absolute;
     }
 
-    .owl-carousel .owl-dots .owl-dot span {
+    /* .owl-carousel .owl-dots .owl-dot span {
       background: transparent;
       border: 1px solid var(--main-black-color);
       transition: all 0.2s ease;
@@ -117,18 +117,18 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
     .owl-carousel .owl-dots .owl-dot:hover span,
     .owl-carousel .owl-dots .owl-dot.active span {
       background: var(--main-black-color);
-    }
+    } */
 
     .owl-carousel .owl-nav {
       left: 50%;
-      top: 10%;
+      top: -20%;
       transform: translateX(-50%);
       margin: 0;
     }
 
     @font-face {
       font-family: "Font TVRI";
-      src: url('cssMediatama/fontTVRI.ttf');
+      src: url('<?php echo _URLWEB; ?>cssMediatama/fontTVRI.ttf');
     }
 
     .a .nav-link {
@@ -137,4 +137,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
   </style>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+
 </head>
