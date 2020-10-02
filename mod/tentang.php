@@ -40,7 +40,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 	<br>
 
 	<!-- News -->
-	<section class="site-section block-13" id="testimonials-section" data-aos="fade">
+	<section class="site-section block-13" style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame10.png');" data-aos="fade">
 		<div class="container">
 
 			<div class="row justify-content-center" data-aos="fade-up">
@@ -59,7 +59,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 								$sqlkonten = $akdb->dbobject("SELECT * FROM " . _TBKONTEN . " WHERE id_kt='1' AND konten='profil'");
 								?>
 
-								<div class="judul-konten"><?= $sqlkonten->judul; ?></div>
+								<h2 class="text-black"><?= $sqlkonten->judul; ?></h2>
 
 								<?php
 								if ($sqlkonten->foto <> '') {
@@ -71,7 +71,43 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 								<div style="font-family: Arial, Helvetica, sans-serif !important;" id="isi-konten"><?= $sqlkonten->isi; ?></div>
 
-								<div class="jarak3"></div>
+								<br>
+								<br>
+
+								<?php
+								$sqlkonten = $akdb->dbobject("SELECT * FROM " . _TBKONTEN . " WHERE id_kt='2' AND konten='profil'");
+								?>
+
+								<h2 class="text-black"><?= $sqlkonten->judul; ?></h2>
+
+								<?php
+								if ($sqlkonten->foto <> '') {
+									echo "<div class=\"foto-konten\" align=\"center\">";
+									echo "<img src=\"" . _URLWEB . "up/konten/" . $sqlkonten->foto . "\" class=\"img-fluid\" alt=\"\"/>";
+									echo "</div>";
+								}
+								?>
+
+								<div id="isi-konten"><?= $sqlkonten->isi; ?></div>
+
+								<br>
+								<br>
+
+								<?php
+								$sqlkonten = $akdb->dbobject("SELECT * FROM " . _TBKONTEN . " WHERE id_kt='3' AND konten='profil'");
+								?>
+
+								<h2 class="text-black"><?= $sqlkonten->judul; ?></h2>
+
+								<?php
+								if ($sqlkonten->foto <> '') {
+									echo "<div class=\"foto-konten\" align=\"center\">";
+									echo "</div>";
+								}
+								?>
+
+								<div id="isi-konten"><?= $sqlkonten->isi; ?></div>
+
 								<div align="right"><a href="<?= _URLWEB; ?>" class="button"><span>Ke Beranda</span></a></div>
 
 							</div>
