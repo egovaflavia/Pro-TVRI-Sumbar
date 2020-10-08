@@ -35,10 +35,10 @@
                         <nav class="site-navigation position-relative text-right" role="navigation">
 
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                                <li class="dropdown nav-link">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div style="display: inline-block;" class="dropdown nav-link  text-primary">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Program
-                                    </button>
+                                    </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
                                         <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
@@ -47,10 +47,21 @@
                                         <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
                                         <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/life">Life</a>
                                     </div>
-                                </li>
-                                <li><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></li>
-                                <li><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></li>
-                                <li><a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></li>
+                                </div>
+                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>
+                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></div>
+                                <div style="display: inline-block;" class="dropdown nav-link  text-primary">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Rate Card
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>rate/program">Rate Penyiaran</a>
+                                        <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>rate/iklan">Rate Produksi</a>
+                                    </div>
+                                </div>
+                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>foto" class="nav-link">Gallery</a></div>
+
+                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></div>
                             </ul>
                         </nav>
                     </div>
@@ -62,3 +73,4 @@
 
         </header>
     </div>
+    <div class="py-4"></div>

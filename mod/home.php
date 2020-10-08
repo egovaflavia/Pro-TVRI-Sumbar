@@ -31,43 +31,35 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 <?php include 'mod/header.php' ?>
 
-<body data-spy="scroll" data-target=".site-navbar-target" id="home-section">
+<body>
 
   <?php include 'mod/menudkk.php' ?>
-  <!-- Slider -->
-  <section class="site-blocks-cover overflow-hidden bg-light">
-    <div class="owl-carousel nonloop-block-13" id="owl-carousel">
+
+  <section>
+    <div class="main-carousel" data-flickity='{ "autoPlay": 2000,"wrapAround": true }'>
       <?php while ($pecahSlider = mysql_fetch_assoc($slider)) : ?>
-        <div class="owl-slide d-flex align-items-center cover" style="background-size: cover ; background-image: url(<?php echo _URLWEB; ?>up/slider/<?= $pecahSlider['foto'] ?>);">
-          <div class="container">
-            <div class="row justify-content-center justify-content-md-start">
-              <div class="col-6 col-md-6 offset-md-6 offset-6 ">
-                <div class="owl-slide-text">
-                  <div class="card owl-slide-animated owl-slide-cta" style="opacity: 0.7;">
-                    <div class="card-body">
-                      <h5 class="card-title"><?= $pecahSlider['judul'] ?></h5>
-                      <p class="card-text"><?= $pecahSlider['subjudul'] ?></p>
-                      <a href="<?= $pecahSlider->urlweb ?>" class="btn btn-primary"> More</a>
-                    </div>
-                  </div>
-                </div><!-- /owl-slide-text -->
-              </div>
+        <div class="carousel-cell">
+          <img class="img-class" src="<?php echo _URLWEB; ?>up/slider/<?= $pecahSlider['foto'] ?>" alt="">
+          <div class="card" style="opacity: 0.6;">
+            <div class="card-body container">
+              <h2 class="text-black"><?= $pecahSlider['judul'] ?></h2>
+              <?= $pecahSlider['subjudul'] ?>
             </div>
           </div>
-        </div><!-- /slide1 -->
+        </div>
       <?php endwhile ?>
-      <!-- two more slides here -->
     </div>
-    <!-- other sections here -->
   </section>
+
   <!-- End Slider -->
 
   <!-- Jadwal TV -->
-  <section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame1.png');" id="jadwal" class="site-section">
+  <section class="site-section" id="jadwal">
     <div class="container">
+
       <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-6 text-center heading-section mb-5">
-          <h2 class="text-white mb-2">Jadwal TV</h2>
+          <h2 class="text-black mt-5">Jadwal TV</h2>
           <p>Televisi Nasional, ‎Media Pemersatu Bangsa</p>
         </div>
       </div>
@@ -85,98 +77,102 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
                 <p align="center">Belum Dipublikasikan </p>
               </div>
             <?php else : ?>
-              <div class="mb-4 mb-lg-0 col-lg-6 order-lg-2" data-aos="fade-right">
-                <table class="table table-bordered table-striped">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th>Hari Ini</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                    $dataAcara = $akdb->dbquery("SELECT * FROM " . _TBACARA . " WHERE tgl='" . $tgkini . "'");
-                    while ($pecahAcara = mysql_fetch_assoc($dataAcara)) :
-                    ?>
-                      <?php if ($pecahAcara['jam1'] != '' && $pecahAcara['ac1'] != '') : ?>
+              <div class="mb-4 mb-lg-0 col-lg-6 col-md-6 col-sm-12 order-lg-2" data-aos="fade-right">
+                <div class="card">
+                  <div class="card-body">
+                    <table class="table  table-bordered table-striped">
+                      <thead class="thead-dark">
                         <tr>
-                          <td><?= $pecahAcara['jam1'] ?> &mdash; <?= $pecahAcara['ac1'] ?></td>
+                          <th>Hari Ini</th>
                         </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam2'] != '' && $pecahAcara['ac2'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam2'] ?> &mdash; <?= $pecahAcara['ac2'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam3'] != '' && $pecahAcara['ac3'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam3'] ?> &mdash; <?= $pecahAcara['ac3'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam4'] != '' && $pecahAcara['ac4'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam4'] ?> &mdash; <?= $pecahAcara['ac4'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam5'] != '' && $pecahAcara['ac5'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam5'] ?> &mdash; <?= $pecahAcara['ac5'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam6'] != '' && $pecahAcara['ac6'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam6'] ?> &mdash; <?= $pecahAcara['ac6'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam7'] != '' && $pecahAcara['ac7'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam7'] ?> &mdash; <?= $pecahAcara['ac7'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam8'] != '' && $pecahAcara['ac8'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam8'] ?> &mdash; <?= $pecahAcara['ac8'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam9'] != '' && $pecahAcara['ac9'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam9'] ?> &mdash; <?= $pecahAcara['ac9'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam10'] != '' && $pecahAcara['ac10'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam10'] ?> &mdash; <?= $pecahAcara['ac10'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam11'] != '' && $pecahAcara['ac11'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam11'] ?> &mdash; <?= $pecahAcara['ac11'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam12'] != '' && $pecahAcara['ac12'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam12'] ?> &mdash; <?= $pecahAcara['ac12'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam13'] != '' && $pecahAcara['ac13'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam13'] ?> &mdash; <?= $pecahAcara['ac13'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam14'] != '' && $pecahAcara['ac14'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam14'] ?> &mdash; <?= $pecahAcara['ac14'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                      <?php if ($pecahAcara['jam15'] != '' && $pecahAcara['ac15'] != '') : ?>
-                        <tr>
-                          <td><?= $pecahAcara['jam15'] ?> &mdash; <?= $pecahAcara['ac15'] ?></td>
-                        </tr>
-                      <?php endif ?>
-                    <?php endwhile ?>
-                  </tbody>
-                </table>
+                      </thead>
+                      <tbody>
+                        <?php
+                        $dataAcara = $akdb->dbquery("SELECT * FROM " . _TBACARA . " WHERE tgl='" . $tgkini . "'");
+                        while ($pecahAcara = mysql_fetch_assoc($dataAcara)) :
+                        ?>
+                          <?php if ($pecahAcara['jam1'] != '' && $pecahAcara['ac1'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam1'] ?> &mdash; <?= $pecahAcara['ac1'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam2'] != '' && $pecahAcara['ac2'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam2'] ?> &mdash; <?= $pecahAcara['ac2'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam3'] != '' && $pecahAcara['ac3'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam3'] ?> &mdash; <?= $pecahAcara['ac3'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam4'] != '' && $pecahAcara['ac4'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam4'] ?> &mdash; <?= $pecahAcara['ac4'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam5'] != '' && $pecahAcara['ac5'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam5'] ?> &mdash; <?= $pecahAcara['ac5'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam6'] != '' && $pecahAcara['ac6'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam6'] ?> &mdash; <?= $pecahAcara['ac6'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam7'] != '' && $pecahAcara['ac7'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam7'] ?> &mdash; <?= $pecahAcara['ac7'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam8'] != '' && $pecahAcara['ac8'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam8'] ?> &mdash; <?= $pecahAcara['ac8'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam9'] != '' && $pecahAcara['ac9'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam9'] ?> &mdash; <?= $pecahAcara['ac9'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam10'] != '' && $pecahAcara['ac10'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam10'] ?> &mdash; <?= $pecahAcara['ac10'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam11'] != '' && $pecahAcara['ac11'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam11'] ?> &mdash; <?= $pecahAcara['ac11'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam12'] != '' && $pecahAcara['ac12'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam12'] ?> &mdash; <?= $pecahAcara['ac12'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam13'] != '' && $pecahAcara['ac13'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam13'] ?> &mdash; <?= $pecahAcara['ac13'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam14'] != '' && $pecahAcara['ac14'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam14'] ?> &mdash; <?= $pecahAcara['ac14'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                          <?php if ($pecahAcara['jam15'] != '' && $pecahAcara['ac15'] != '') : ?>
+                            <tr>
+                              <td><?= $pecahAcara['jam15'] ?> &mdash; <?= $pecahAcara['ac15'] ?></td>
+                            </tr>
+                          <?php endif ?>
+                        <?php endwhile ?>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-5 mr-auto text-lg-right align-self-center order-lg-1" data-aos="fade-left">
+              <div class="col-lg-6 col-md-6 col-sm-12 mr-auto text-lg-right align-self-center order-lg-1" data-aos="fade-left">
                 <h2 class="text-black">Susunan Acara Hari Ini <br>
 
                   <!-- </span> 00.00 &mdash; 02.00</h2> -->
@@ -195,17 +191,18 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- Jadwal TV -->
 
   <!-- Program Slide -->
-  <section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame3.png');" class="site-section block-13" id="testimonials-section" data-aos="fade">
+  <section class="site-section bg-light block-13" id="testimonials-section" data-aos="fade">
     <div class="container">
 
       <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-6 text-center heading-section mb-5">
-          <h2 class="text-black mb-2">PROGRAM ACARA</h2>
-          <p>Televisi Nasional, ‎Media Pemersatu Bangsa</p>
+          <h2 class="text-black mb-2">Program Acara</h2>
+          <p>Berita Terkini Seputar Sumatera Barat</p>
         </div>
       </div>
+
       <div data-aos="fade-up" data-aos-delay="200">
-        <div class="owl-carousel nonloop-block-13" id="owl-carousel">
+        <div class="owl-carousel nonloop-block-13">
 
           <?php while ($pecahProgram = mysql_fetch_assoc($program)) : ?>
             <?php
@@ -223,6 +220,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
               $warna = '05683a';
             }
             ?>
+
             <div class="card m-2">
               <a href="<?= _URLWEB . "program/detil/" . $pecahProgram['id_pg'] . '/' . strtolower(str_replace(' ', '-', $pecahProgram['nama'])) . '.html' ?>">
                 <img class="card-img-top" src="<?= _URLWEB; ?><?= ($pecahProgram['foto'] != '') ? 'up/program/' . $pecahProgram['foto'] : 'cssMediatama/images/noimage.png' ?>" alt="No Image">
@@ -238,15 +236,18 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
                   Selengkapnya</a>
               </div>
             </div>
+
           <?php endwhile ?>
 
         </div>
       </div>
+
     </div>
   </section>
   <!-- Program Slide -->
+
   <!-- News -->
-  <section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame4.png');" class="site-section block-13" id="testimonials-section" data-aos="fade">
+  <section class="bg-white site-section block-13" id="testimonials-section" data-aos="fade">
     <div class="container">
 
       <div class="row justify-content-center" data-aos="fade-up">
@@ -255,6 +256,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
           <p>Berita Terkini Seputar Sumatera Barat</p>
         </div>
       </div>
+
       <div data-aos="fade-up" data-aos-delay="200">
         <div class="owl-carousel nonloop-block-13">
 
@@ -294,7 +296,8 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
           ?>
               <div class="card m-2">
                 <a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>">
-                  <img style="height: 12em;" class="card-img-top" src="<?= _URLWEB . 'up/berita/' . $rowterkini->foto ?>" alt="No Image"></a>
+                  <img style="height: 12em;" class="card-img-top" src="<?= _URLWEB . 'up/berita/' . $rowterkini->foto ?>" alt="No Image">
+                </a>
                 <div class="card-body">
                   <a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>">
                     <h5 class="card-title text-black"><?= $rowterkini->judul ?></h5>
@@ -302,7 +305,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
                   <p class="card-text"><span class="post-meta mb-3 d-block"><?php $tanggal->contanggalx(substr($rowterkini->tgl_jam, 8, 2), substr($rowterkini->tgl_jam, 5, 2), substr($rowterkini->tgl_jam, 0, 4));
                                                                             echo " " . substr($rowterkini->tgl_jam, 11, 5) . " WIB"; ?></span>
                     <p></p>
-                    <a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>" class="btn btn-primary">&mdash; Selengkapnya</a>
+                    <a href="<?php echo _URLWEB . "berita/detil/$rowterkini->id_br/" . strtolower(str_replace(" ", "-", $judul41)) . ".html"; ?>" class="btn btn-primary">Selengkapnya</a>
                 </div>
               </div>
             <?php
@@ -319,9 +322,8 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   </section>
   <!-- News -->
 
-
-  <!-- SnapWidget -->
-  <section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame6.png');" class="site-section">
+  <!-- Instagram -->
+  <section style="width: 100%;height: auto; background-repeat: no-repeat; background-size:100% 100%;background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/instagramBg.png');" class="site-section">
     <div class="row justify-content-center" data-aos="fade-up">
       <div class="col-lg-6 text-center heading-section mb-5">
         <h2 class="text-black mb-2">Follow Instagram Kami</h2>
@@ -333,7 +335,10 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/f9a1f69d0a195039b5f812ca100e0c31.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
   </section>
-  <section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame2.png');" class="site-section">
+  <!-- Instagram -->
+
+  <!-- Map -->
+  <section class="site-section">
     <div class="row justify-content-center" data-aos="fade-up">
       <div class="col-lg-6 text-center heading-section mb-3">
         <h2 class="text-black">Lokasi Kami</h2>

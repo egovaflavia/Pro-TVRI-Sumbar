@@ -1,15 +1,15 @@
 <?php
-// if (!defined('_VALID_ACCESS')) {
-//   header("location: index.php");
-//   die;
-// }
+if (!defined('_VALID_ACCESS')) {
+  header("location: index.php");
+  die;
+}
 
-// if (isset($_GET["id"])) $idh = $_GET['id'];
-// else $idh = "";
-// if (isset($_GET["se"])) $seh = $_GET['se'];
-// else $seh = "";
-// if (isset($_GET["mod"])) $moh = $_GET['mod'];
-// else $moh = "";
+if (isset($_GET["id"])) $idh = $_GET['id'];
+else $idh = "";
+if (isset($_GET["se"])) $seh = $_GET['se'];
+else $seh = "";
+if (isset($_GET["mod"])) $moh = $_GET['mod'];
+else $moh = "";
 
 $akdb = new aksesdb;
 $akdb->dbconnect(_DBSERVER, _DBUSER, _DBPASS, _DBNAME);
@@ -42,34 +42,76 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
 
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/fonts/flaticon/font/flaticon.css">
 
-  <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/aos.css">
+  <!-- <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/aos.css"> -->
 
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/style.css">
 
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/owl.carousel.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
+
   <link rel="stylesheet" href="<?php echo _URLWEB; ?>cssMediatama/css/owl.theme.default.min.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
   <style>
-    :root {
-      --main-white-color: white;
-      --main-black-color: black;
+    @font-face {
+      font-family: "Bold";
+      src: url('<?php echo _URLWEB; ?>cssMediatama/Bold.ttf');
     }
 
-    .static {
-      position: static;
+    @font-face {
+      font-family: "Regular";
+      src: url('<?php echo _URLWEB; ?>cssMediatama/Regular.ttf');
     }
 
-    .cover {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    h1,
+    h2,
+    h5,
+    .nav-link {
+      font-family: "Bold" !important;
     }
 
-    * {
-      font-family: "Font TVRI" !important;
+    p {
+      font-family: "Regular" !important;
     }
 
+
+    .carousel-cell {
+      width: 100%;
+      margin-right: 10px;
+      /* position: absolute; */
+    }
+
+    .main-carousel .carousel-cell .img-class {
+      width: 100%;
+    }
+
+    /* position dots up a bit */
+    .flickity-page-dots {
+      bottom: 0px;
+    }
+
+    /* dots are lines */
+    .flickity-page-dots .dot {
+      height: 4px;
+      width: 40px;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    @media (min-width: 1200px) {
+      .main-carousel .carousel-cell .card {
+        position: absolute;
+        top: 20em;
+        left: 50em;
+        right: 10em;
+        bottom: 5em;
+      }
+    }
+  </style>
+
+  <style>
     .owl-carousel .owl-slide {
       position: relative;
       height: 100vh;
@@ -108,17 +150,6 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       position: absolute;
     }
 
-    /* .owl-carousel .owl-dots .owl-dot span {
-      background: transparent;
-      border: 1px solid var(--main-black-color);
-      transition: all 0.2s ease;
-    }
-
-    .owl-carousel .owl-dots .owl-dot:hover span,
-    .owl-carousel .owl-dots .owl-dot.active span {
-      background: var(--main-black-color);
-    } */
-
     .owl-carousel .owl-nav {
       left: 50%;
       top: -20%;
@@ -126,17 +157,12 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       margin: 0;
     }
 
-    @font-face {
-      font-family: "Font TVRI";
-      src: url('<?php echo _URLWEB; ?>cssMediatama/fontTVRI.ttf');
-    }
-
-    .a .nav-link {
-      font-family: "Font TVRI" !important;
+    @media (min-width: 576px) {
+      /* .memberiSpace{
+        
+      } */
     }
   </style>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
 

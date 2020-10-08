@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <style>
+        .carousel-cell {
+            width: 100%;
+            margin-right: 10px;
+            /* position: absolute; */
+        }
+
+        .main-carousel .carousel-cell .img-class {
+            width: 100%;
+        }
+
+        /* position dots up a bit */
+        .flickity-page-dots {
+            bottom: 0px;
+        }
+
+        /* dots are lines */
+        .flickity-page-dots .dot {
+            height: 4px;
+            width: 40px;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        @media (min-width: 1200px) {
+            .main-carousel .carousel-cell .card {
+                position: absolute;
+                top: 20em;
+                left: 50em;
+                right: 10em;
+                bottom: 5em;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="bg-light">
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">
+            <img style="width:100%;" class="img-fluid" src="http://tvrisumbar.co.id/up/web/29052020124815web-logo.gif"
+                width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <li class="dropdown nav-link">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Program
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" style="color: #521b6c" href=">Entertaiment</a>
+                        <a class=" dropdown-item" style="color: #0e55a5" href="">News</a>
+                        <a class="dropdown-item" style="color: #05683a" href="">Culture</a>
+                        <a class="dropdown-item" style="color: #d2571c" href="">Kid</a>
+                        <a class="dropdown-item" style="color: #9e0b11" href="">Sport</a>
+                        <a class="dropdown-item" style="color: #05683a" href="">Life</a>
+                    </div>
+                </li>
+                <li><a href="" class="nav-link">Jadwal TV</a></li>
+                <li><a href="" class="nav-link">Tentang Kami</a></li>
+                <li><a href="" class="nav-link"><img style="width: 150px;" src="http://tvrisumbar.co.id/img/ls.gif"
+                            alt=""></a></li>
+            </div>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="main-carousel"
+            data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": false,"wrapAround": true }'>
+
+            <div class="carousel-cell">
+                <img class="img-class" src="../up/slider/12032020135541LENSA-OLAHRAGA.jpg" alt="">
+                <div class="card">
+                    <div class="card-body container">
+                        <h2>Lorem title for</h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <img class="img-class" src="../up/slider/12032020120814PAGI-KITA.jpg" alt="">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Lorem title for</h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <img class="img-class" src="../up/slider/12032020135218ANAK-MINANG-CERIA.jpg" alt="">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Lorem title for</h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>

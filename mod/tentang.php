@@ -37,16 +37,23 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 	<?php include 'mod/menudkk.php' ?>
 
-	<br>
 
-	<!-- News -->
-	<section class="site-section block-13" style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame10.png');" data-aos="fade">
+
+	<!-- Tentang Kami -->
+	<section class="site-section block-13 bg-light" data-aos="fade">
 		<div class="container">
+
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="<?= _URLWEB ?>">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Tentang Kami</li>
+				</ol>
+			</nav>
 
 			<div class="row justify-content-center" data-aos="fade-up">
 				<div class="col-lg-6 text-center heading-section mb-5">
 					<h2 class="text-black mb-2">Tentang Kami</h2>
-					<p>Berita Terkini Seputar Sumatera Barat</p>
+					<p>Seputar TVRI Sumatera Barat</p>
 				</div>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="200">
@@ -132,7 +139,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 			</div>
 		</div>
 	</section>
-	<!-- News -->
+	<!-- Tentang Kami -->
 
 
 	<?php

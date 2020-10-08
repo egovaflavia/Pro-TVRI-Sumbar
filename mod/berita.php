@@ -33,16 +33,21 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 <?php include 'mod/header.php' ?>
 
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" class="bg-light">
 
 	<?php include 'mod/menudkk.php' ?>
 
 	<br>
 
 	<!-- News Slide -->
-	<section style="background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/frame8.png" class="site-section block-13" id="testimonials-section" data-aos="fade">
+	<section class="site-section bg-light block-13" data-aos="fade">
 		<div class="container">
-
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="<?= _URLWEB ?>">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">News</li>
+				</ol>
+			</nav>
 			<div class="row justify-content-center" data-aos="fade-up">
 				<div class="col-lg-6 text-center heading-section mb-5">
 					<h2 class="text-black mb-2">NEWS</h2>
