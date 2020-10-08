@@ -42,10 +42,9 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
                                         <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
-                                        <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/culture">Culture</a>
+                                        <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/cultureandlife">Culture & Life</a>
                                         <a class="dropdown-item" style="color: #d2571c" href="<?php echo _URLWEB; ?>program/kid">Kid</a>
                                         <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
-                                        <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/life">Life</a>
                                     </div>
                                 </div>
                                 <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>

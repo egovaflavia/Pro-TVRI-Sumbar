@@ -17,7 +17,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       </div>
     </div>
     <div class="row">
-      <div class="col-md-5 col-xs-12" data-aos="fade-up">
+      <div class="col-md-5 col-sm-12" data-aos="fade-up">
         <p class="text-justify">
           TVRI Stasiun Sumatra Barat terletak di Jalan Raya By pass KM 16 Koto Panjang, Padang. TVRI Stasiun Sumatera
           Barat
@@ -25,56 +25,65 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
         </p>
         <div class="row">
           <div class="col-md-12">
-            <span class="icon-instagram mr-4"></span>
-            <span class="icon-facebook mr-4"></span>
-            <span class="icon-youtube mr-4"></span>
-            <span class="icon-tumblr mr-4"></span>
-            <span class="icon-google mr-4"></span>
-            <span class="icon-telegram mr-4"></span>
+            <a href="https://www.instagram.com/tvrisumbar/"><span class="icon-instagram mr-4"></span></a>
+            <a href="https://www.facebook.com/tvrisumatrabarat/"><span class="icon-facebook mr-4"></span></a>
+            <a href="https://www.youtube.com/channel/UCO_Ga01t2fUtIzJZGIfSKeg"><span class="icon-youtube mr-4"></span></a>
+            <a href="https://twitter.com/tvrisumbar"><span class="icon-twitter mr-4"></span></a>
+            <a href="mailto:humas@tvrisumbar.co.id"><span class="icon-google mr-4"></span></a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-7 col-xs-12" data-aos="fade-down">
-        <div style="display: inline-block;" class="dropdown nav-link  text-primary mr-4">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Program
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
-            <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
-            <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/culture">Culture</a>
-            <a class="dropdown-item" style="color: #d2571c" href="<?php echo _URLWEB; ?>program/kid">Kid</a>
-            <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
-            <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/life">Life</a>
+      <div class="col-md-7 col-sm-12" data-aos="fade-down">
+
+        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+          <div style="display: inline-block;font-size: 15px;" class="dropdown nav-link  text-primary">
+            <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Program
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
+              <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
+              <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/cultureandlife">Culture & Life</a>
+              <a class="dropdown-item" style="color: #d2571c" href="<?php echo _URLWEB; ?>program/kid">Kid</a>
+              <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
+            </div>
+          </div>
+          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>
+          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></div>
+          <div style="display: inline-block;font-size: 15px;" class="dropdown nav-link  text-primary">
+            <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Rate Card
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>rate/program">Rate Penyiaran</a>
+              <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>rate/iklan">Rate Produksi</a>
+            </div>
+          </div>
+          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>foto" class="nav-link">Gallery</a></div>
+
+          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></div>
+        </ul>
+        </nav>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class="border-top ">
+            <p class="copyright"><small>
+                COPYRIGHT © 2015
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+
           </div>
         </div>
 
-        <a href="<?php echo _URLWEB; ?>home#jadwal" style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class=" text-primary mr-4">Jadwal TV</a>
-        <a href="<?php echo _URLWEB; ?>tentang" style="font-family: 'Font TVRI' !important; letter-spacing: 1px; font-weight: bolder;" class=" text-primary mr-4">Tentang Kami</a>
-        <a href="<?php echo _URLWEB; ?>stream"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a>
-
       </div>
-
     </div>
-
-    <div class="row text-center">
-      <div class="col-md-12">
-        <div class="border-top ">
-          <p class="copyright"><small>
-              COPYRIGHT © 2015
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
 </footer>
+
 <!-- JavaScript -->
 <script>
   var elem = document.querySelector('.main-carousel');

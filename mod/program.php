@@ -56,9 +56,9 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 					} elseif (strtolower($_GET['se']) == 'news') {
 						$warna = '0e55a5';
 						$text = 'News';
-					} elseif (strtolower($_GET['se']) == 'culture') {
+					} elseif (strtolower($_GET['se']) == 'cultureandlife') {
 						$warna = '05683a';
-						$text = 'Culture';
+						$text = 'Culture & Life';
 					} elseif (strtolower($_GET['se']) == 'sport') {
 						$warna = '9e0b11';
 						$text = 'Sport';
@@ -160,13 +160,17 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 					<?php
 						}
 					}
-				} elseif ($se == 'entertainment' or $se == 'news' or $se == 'culture' or $se == 'life' or $se == 'kid' or $se == 'sport') {
+				} elseif ($se == 'entertainment' or $se == 'news' or $se == 'cultureandlife' or $se == 'life' or $se == 'kid' or $se == 'sport') {
 
 					?>
 
 					<!-- box detil -->
 					<?php
-					$sqlse = $akdb->dbquery("SELECT * FROM " . _TBPROGRAM . " WHERE kat='" . ucwords($se) . "' ORDER BY id_pg DESC");
+					if ($se == 'cultureandlife') {
+						$sqlse = $akdb->dbquery("SELECT * FROM " . _TBPROGRAM . " WHERE kat='culture' OR kat='life' ORDER BY id_pg DESC");
+					} else {
+						$sqlse = $akdb->dbquery("SELECT * FROM " . _TBPROGRAM . " WHERE kat='" . ucwords($se) . "' ORDER BY id_pg DESC");
+					}
 
 					while ($rowse = mysql_fetch_object($sqlse)) {
 
