@@ -49,7 +49,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
                 <div class="col-lg-6 text-center heading-section mb-5">
                     <h2 class="text-black mb-2">Rate Card</h2>
-                    <p style="font-size: 15px; color: #FFFF; font-weight: bold;"><?php echo "Egova" ?></p>
+                    <p style="font-size: 15px; color: #1b3699; font-weight: bold;">TVRI Sumatera Barat</p>
                 </div>
             </div>
             <div class="row">

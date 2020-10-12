@@ -54,12 +54,11 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- End Slider -->
 
   <!-- Jadwal TV -->
-  <section class="site-section" id="jadwal">
+  <section id="jadwal" class="site-section">
     <div class="container">
-
       <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-6 text-center heading-section mb-5">
-          <h2 class="text-black mt-5">Jadwal TV</h2>
+          <h2 class="text-black mb-2">Jadwal TV</h2>
           <p>Televisi Nasional, ‎Media Pemersatu Bangsa</p>
         </div>
       </div>
@@ -77,112 +76,123 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
                 <p align="center">Belum Dipublikasikan </p>
               </div>
             <?php else : ?>
-              <div class="mb-4 mb-lg-0 col-lg-6 col-md-6 col-sm-12 order-lg-2" data-aos="fade-right">
-                <div class="card">
-                  <div class="card-body">
-                    <table class="table  table-bordered table-striped">
-                      <thead class="thead-dark">
+              <div class="col-md-6 col-sm-12">
+                <h2 style="color: #1b365d;">Susunan Acara Hari Ini </h2>
+                <table class="table table-bordered table-striped">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Hari Ini</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    $dataAcara = $akdb->dbquery("SELECT * FROM " . _TBACARA . " WHERE tgl='" . $tgkini . "'");
+                    while ($pecahAcara = mysql_fetch_assoc($dataAcara)) :
+                    ?>
+                      <?php if ($pecahAcara['jam1'] != '' && $pecahAcara['ac1'] != '') : ?>
                         <tr>
-                          <th>Hari Ini</th>
+                          <td><?= $pecahAcara['jam1'] ?> &mdash; <?= $pecahAcara['ac1'] ?></td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        <?php
-                        $dataAcara = $akdb->dbquery("SELECT * FROM " . _TBACARA . " WHERE tgl='" . $tgkini . "'");
-                        while ($pecahAcara = mysql_fetch_assoc($dataAcara)) :
-                        ?>
-                          <?php if ($pecahAcara['jam1'] != '' && $pecahAcara['ac1'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam1'] ?> &mdash; <?= $pecahAcara['ac1'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam2'] != '' && $pecahAcara['ac2'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam2'] ?> &mdash; <?= $pecahAcara['ac2'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam3'] != '' && $pecahAcara['ac3'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam3'] ?> &mdash; <?= $pecahAcara['ac3'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam4'] != '' && $pecahAcara['ac4'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam4'] ?> &mdash; <?= $pecahAcara['ac4'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam5'] != '' && $pecahAcara['ac5'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam5'] ?> &mdash; <?= $pecahAcara['ac5'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam6'] != '' && $pecahAcara['ac6'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam6'] ?> &mdash; <?= $pecahAcara['ac6'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam7'] != '' && $pecahAcara['ac7'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam7'] ?> &mdash; <?= $pecahAcara['ac7'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam8'] != '' && $pecahAcara['ac8'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam8'] ?> &mdash; <?= $pecahAcara['ac8'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam9'] != '' && $pecahAcara['ac9'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam9'] ?> &mdash; <?= $pecahAcara['ac9'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam10'] != '' && $pecahAcara['ac10'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam10'] ?> &mdash; <?= $pecahAcara['ac10'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam11'] != '' && $pecahAcara['ac11'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam11'] ?> &mdash; <?= $pecahAcara['ac11'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam12'] != '' && $pecahAcara['ac12'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam12'] ?> &mdash; <?= $pecahAcara['ac12'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam13'] != '' && $pecahAcara['ac13'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam13'] ?> &mdash; <?= $pecahAcara['ac13'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam14'] != '' && $pecahAcara['ac14'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam14'] ?> &mdash; <?= $pecahAcara['ac14'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                          <?php if ($pecahAcara['jam15'] != '' && $pecahAcara['ac15'] != '') : ?>
-                            <tr>
-                              <td><?= $pecahAcara['jam15'] ?> &mdash; <?= $pecahAcara['ac15'] ?></td>
-                            </tr>
-                          <?php endif ?>
-                        <?php endwhile ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam2'] != '' && $pecahAcara['ac2'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam2'] ?> &mdash; <?= $pecahAcara['ac2'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam3'] != '' && $pecahAcara['ac3'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam3'] ?> &mdash; <?= $pecahAcara['ac3'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam4'] != '' && $pecahAcara['ac4'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam4'] ?> &mdash; <?= $pecahAcara['ac4'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam5'] != '' && $pecahAcara['ac5'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam5'] ?> &mdash; <?= $pecahAcara['ac5'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam6'] != '' && $pecahAcara['ac6'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam6'] ?> &mdash; <?= $pecahAcara['ac6'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam7'] != '' && $pecahAcara['ac7'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam7'] ?> &mdash; <?= $pecahAcara['ac7'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam8'] != '' && $pecahAcara['ac8'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam8'] ?> &mdash; <?= $pecahAcara['ac8'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam9'] != '' && $pecahAcara['ac9'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam9'] ?> &mdash; <?= $pecahAcara['ac9'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam10'] != '' && $pecahAcara['ac10'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam10'] ?> &mdash; <?= $pecahAcara['ac10'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam11'] != '' && $pecahAcara['ac11'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam11'] ?> &mdash; <?= $pecahAcara['ac11'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam12'] != '' && $pecahAcara['ac12'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam12'] ?> &mdash; <?= $pecahAcara['ac12'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam13'] != '' && $pecahAcara['ac13'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam13'] ?> &mdash; <?= $pecahAcara['ac13'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam14'] != '' && $pecahAcara['ac14'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam14'] ?> &mdash; <?= $pecahAcara['ac14'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                      <?php if ($pecahAcara['jam15'] != '' && $pecahAcara['ac15'] != '') : ?>
+                        <tr>
+                          <td><?= $pecahAcara['jam15'] ?> &mdash; <?= $pecahAcara['ac15'] ?></td>
+                        </tr>
+                      <?php endif ?>
+                    <?php endwhile ?>
+                  </tbody>
+                </table>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 mr-auto text-lg-right align-self-center order-lg-1" data-aos="fade-left">
-                <h2 class="text-black">Susunan Acara Hari Ini <br>
-
-                  <!-- </span> 00.00 &mdash; 02.00</h2> -->
-                  <img class="img-fluid" style="width: 200px;" src="<?php echo _URLWEB; ?>cssMediatama/images/logobaru.jpg" alt="No Image">
-                  <p style="font-size: 10px;" class="mb-4">
-                    Jadwal susunan acara dapat berubah sewaktu-waktu apabila dalam keadaan tertentu
-                  </p>
-                  <p><a href="<?php echo _URLWEB; ?>stream"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></p>
+              <div class="col-md-6 col-sm-12">
+                <h2 style="color: #1b365d;">Streaming TVRI Sumatera Barat </h2>
+                <div id="playerElement" style="width:100%; height:400px; padding:0"></div>
+                <script type="text/javascript">
+                  WowzaPlayer.create('playerElement', {
+                    "license": "PLAY1-cNX7a-MhVP9-wnkb7-QmteJ-9NMHV",
+                    "title": "Play",
+                    "description": "",
+                    "sourceURL": "http://wowza58.indostreamserver.com:1935/tvrisumbar/live2/playlist.m3u8",
+                    "autoPlay": true,
+                    "volume": "100",
+                    "mute": false,
+                    "loop": false,
+                    "audioOnly": false,
+                    "uiShowQuickRewind": true,
+                    "posterFrameURL": "http://tvrisumbar.co.id/img/online-streaming.jpg",
+                    "endPosterFrameURL": "http://tvrisumbar.co.id/img/online-streaming.jpg",
+                    "uiPosterFrameFillMode": "fill",
+                    "uiQuickRewindSeconds": "30"
+                  });
+                </script>
               </div>
             <?php endif ?>
+
+
           </div>
         </div>
       </div>
@@ -197,7 +207,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
       <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-6 text-center heading-section mb-5">
           <h2 class="text-black mb-2">Program Acara</h2>
-          <p>Berita Terkini Seputar Sumatera Barat</p>
+          <p>TVRI Sumatera Barat</p>
         </div>
       </div>
 

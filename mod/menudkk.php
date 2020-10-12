@@ -35,8 +35,8 @@
                         <nav class="site-navigation position-relative text-right" role="navigation">
 
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                                <div style="display: inline-block;" class="dropdown nav-link  text-primary">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="dropdown repon text-white text-primary">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Program
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -47,10 +47,12 @@
                                         <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
                                     </div>
                                 </div>
-                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>
-                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></div>
-                                <div style="display: inline-block;" class="dropdown nav-link  text-primary">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="repon">
+                                    <a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>
+                                <div class="repon">
+                                    <a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></div>
+                                <div class="dropdown repon text-white text-primary">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Rate Card
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -58,9 +60,11 @@
                                         <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>rate/iklan">Rate Produksi</a>
                                     </div>
                                 </div>
-                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>foto" class="nav-link">Gallery</a></div>
-
-                                <div style="display: inline-block;"><a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></div>
+                                <div class="repon">
+                                    <a href="<?php echo _URLWEB; ?>foto" class="nav-link">Gallery</a></div>
+                                <div class="repon">
+                                    <a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a>
+                                </div>
                             </ul>
                         </nav>
                     </div>

@@ -9,78 +9,73 @@ $akdb->dbconnect(_DBSERVER, _DBUSER, _DBPASS, _DBNAME);
 
 $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC LIMIT 0,1");
 ?>
-<footer>
+<footer style="background-color: #1b365d;">
   <div class="container">
     <div class="row">
       <div class="col-md-12" data-aos="fade-up">
-        <img style="width: 170px;height: 100px;" class="img-fluid" src="<?php echo _URLWEB; ?>cssMediatama/images/logobaru.jpg" alt="">
+        <img class="img-fluid" style="position: relative;top: -20px; width: 49%;" src="<?php echo _URLWEB; ?>cssMediatama/banner/logo.gif" alt="">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-5 col-sm-12" data-aos="fade-up">
-        <p class="text-justify">
+      <div class="col-md-6 col-sm-12" data-aos="fade-up">
+        <p class="text-white text-justify">
           TVRI Stasiun Sumatra Barat terletak di Jalan Raya By pass KM 16 Koto Panjang, Padang. TVRI Stasiun Sumatera
           Barat
           Diresmikan pada 19 April 1997. TVRI Sumatera Barat mengudara secara konsisten selama 4 jam setiap harinya.
         </p>
         <div class="row">
           <div class="col-md-12">
-            <a href="https://www.instagram.com/tvrisumbar/"><span class="icon-instagram mr-4"></span></a>
-            <a href="https://www.facebook.com/tvrisumatrabarat/"><span class="icon-facebook mr-4"></span></a>
-            <a href="https://www.youtube.com/channel/UCO_Ga01t2fUtIzJZGIfSKeg"><span class="icon-youtube mr-4"></span></a>
-            <a href="https://twitter.com/tvrisumbar"><span class="icon-twitter mr-4"></span></a>
-            <a href="mailto:humas@tvrisumbar.co.id"><span class="icon-google mr-4"></span></a>
+            <a class="text-white" href="https://www.instagram.com/tvrisumbar/"><span class="icon-instagram mr-4"></span></a>
+            <a class="text-white" href="https://www.facebook.com/tvrisumatrabarat/"><span class="icon-facebook mr-4"></span></a>
+            <a class="text-white" href="https://www.youtube.com/channel/UCO_Ga01t2fUtIzJZGIfSKeg"><span class="icon-youtube mr-4"></span></a>
+            <a class="text-white" href="https://twitter.com/tvrisumbar"><span class="icon-twitter mr-4"></span></a>
+            <a class="text-white" href="mailto:humas@tvrisumbar.co.id"><span class="icon-google mr-4"></span></a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-7 col-sm-12" data-aos="fade-down">
-
-        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-          <div style="display: inline-block;font-size: 15px;" class="dropdown nav-link  text-primary">
-            <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Program
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" style="color: #521b6c" href="<?php echo _URLWEB; ?>program/entertainment">Entertaiment</a>
-              <a class="dropdown-item" style="color: #0e55a5" href="<?php echo _URLWEB; ?>program/news">News</a>
-              <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>program/cultureandlife">Culture & Life</a>
-              <a class="dropdown-item" style="color: #d2571c" href="<?php echo _URLWEB; ?>program/kid">Kid</a>
-              <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>program/sport">Sport</a>
-            </div>
-          </div>
-          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>home#jadwal" class="nav-link">Jadwal TV</a></div>
-          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>tentang" class="nav-link">Tentang Kami</a></div>
-          <div style="display: inline-block;font-size: 15px;" class="dropdown nav-link  text-primary">
-            <a href="javascript:void(0)" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Rate Card
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" style="color: #9e0b11" href="<?php echo _URLWEB; ?>rate/program">Rate Penyiaran</a>
-              <a class="dropdown-item" style="color: #05683a" href="<?php echo _URLWEB; ?>rate/iklan">Rate Produksi</a>
-            </div>
-          </div>
-          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>foto" class="nav-link">Gallery</a></div>
-
-          <div style="display: inline-block;font-size: 15px;"><a href="<?php echo _URLWEB; ?>stream" class="nav-link"><img style="width: 150px;" src="<?php echo _URLWEB; ?>cssMediatama/banner/live.gif" alt=""></a></div>
+      <div class="col-md-3 col-sm-12" data-aos="fade-down">
+        <h4 class="topicof text-white" style="font-size: 20px;margin-left: 1em;background: url('img/icopadf.png') no-repeat left;">TVRI Sumbar</h4>
+        <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-block">
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://tvri.go.id" target="_blank" class="text-white">Sejarah TVRI Sumbar</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://kominfo.go.id" target="_blank" class="text-white">Visi, Misi & Slogan</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sumbarprov.go.id" target="_blank" class="text-white">Struktur Organisasi</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://padang.go.id" target="_blank" class="text-white">Sumber Daya Manusia</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://agamkab.go.id" target="_blank" class="text-white">Agenda Kegiatan</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Kritik & Saran</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Hubungi Kami</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Live Streaming</a></li>
         </ul>
-        </nav>
       </div>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <div class="border-top ">
-            <p class="copyright"><small>
-                COPYRIGHT © 2015
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
 
-          </div>
+      <div class="col-md-3 col-sm-12" data-aos="fade-down">
+        <h4 class="text-white topicof" style="margin-left: 1em;font-size: 20px;background: url('img/icopadf.png') no-repeat left;">Link Lainnya</h4>
+        <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-block">
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://tvri.go.id" target="_blank" class="text-white">Televisi Republik Indonesia</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://kominfo.go.id" target="_blank" class="text-white">Kementerian Komunikasi dan Informatika</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sumbarprov.go.id" target="_blank" class="text-white">Pemerintah Provinsi Sumatera Barat</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://padang.go.id" target="_blank" class="text-white">Pemerintah Kota Padang</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://agamkab.go.id" target="_blank" class="text-white">Pemerintah Kabupaten Agam</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Pemerintah Kabupaten Sijunjung</a></li>
+        </ul>
+        <p align="right"><a class="text-white" style="margin-top: 5px;" href="<?php echo _URLWEB; ?>link">» Link Lainnya</a></p>
+      </div>
+
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12">
+        <div class="border-top ">
+          <p class="text-white copyright"><small>
+              COPYRIGHT © 2015
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              TELEVISI REPUBLIK INDONESIA STASIUN SUMATERA BARAT
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+
         </div>
-
       </div>
+
     </div>
 </footer>
 

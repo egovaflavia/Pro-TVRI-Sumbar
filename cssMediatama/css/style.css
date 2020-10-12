@@ -1,3 +1,13 @@
+.topicof {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-left: 24px;
+  height: 24px;
+  border-bottom: 1px solid #FFFFFF;
+  font-family: Ubuntu, 'Open Sans', Tahoma, sans-serif !important;
+}
+
 /* Base */
 html {
   overflow-x: hidden;

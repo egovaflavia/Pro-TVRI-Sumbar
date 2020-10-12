@@ -108,6 +108,10 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
         right: 10em;
         bottom: 5em;
       }
+
+      .repon {
+        display: inline-block;
+      }
     }
   </style>
 
@@ -159,7 +163,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
 
     @media (min-width: 576px) {
       /* .memberiSpace{
-        
+      
       } */
     }
   </style>
