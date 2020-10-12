@@ -37,14 +37,13 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       <div class="col-md-3 col-sm-12" data-aos="fade-down">
         <h4 class="topicof text-white" style="font-size: 20px;margin-left: 1em;background: url('img/icopadf.png') no-repeat left;">TVRI Sumbar</h4>
         <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-block">
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://tvri.go.id" target="_blank" class="text-white">Sejarah TVRI Sumbar</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://kominfo.go.id" target="_blank" class="text-white">Visi, Misi & Slogan</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sumbarprov.go.id" target="_blank" class="text-white">Struktur Organisasi</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://padang.go.id" target="_blank" class="text-white">Sumber Daya Manusia</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://agamkab.go.id" target="_blank" class="text-white">Agenda Kegiatan</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Kritik & Saran</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Hubungi Kami</a></li>
-          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://sijunjung.go.id" target="_blank" class="text-white">Live Streaming</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>tentang#sejarah" class="text-white">Sejarah TVRI Sumbar</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>tentang#visi" class="text-white">Visi, Misi & Slogan</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>tentang#struktur" class="text-white">Struktur Organisasi</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>agenda" class="text-white">Agenda Kegiatan</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>saran" class="text-white">Kritik & Saran</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>hubungi" class="text-white">Hubungi Kami</a></li>
+          <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>stream" class="text-white">Live Streaming</a></li>
         </ul>
       </div>
 

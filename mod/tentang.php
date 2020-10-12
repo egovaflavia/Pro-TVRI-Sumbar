@@ -50,7 +50,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 				</ol>
 			</nav>
 
-			<div class="row justify-content-center" data-aos="fade-up">
+			<div id="sejarah" class="row justify-content-center" data-aos="fade-up">
 				<div class="col-lg-6 text-center heading-section mb-5">
 					<h2 class="text-black mb-2">Tentang Kami</h2>
 					<p>Seputar TVRI Sumatera Barat</p>
@@ -85,7 +85,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 								$sqlkonten = $akdb->dbobject("SELECT * FROM " . _TBKONTEN . " WHERE id_kt='2' AND konten='profil'");
 								?>
 
-								<h2 class="text-black"><?= $sqlkonten->judul; ?></h2>
+								<h2 id="visi" class="text-black"><?= $sqlkonten->judul; ?></h2>
 
 								<?php
 								if ($sqlkonten->foto <> '') {
@@ -104,7 +104,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 								$sqlkonten = $akdb->dbobject("SELECT * FROM " . _TBKONTEN . " WHERE id_kt='3' AND konten='profil'");
 								?>
 
-								<h2 class="text-black"><?= $sqlkonten->judul; ?></h2>
+								<h2 id="struktur" class="text-black"><?= $sqlkonten->judul; ?></h2>
 
 								<?php
 								if ($sqlkonten->foto <> '') {
@@ -115,7 +115,6 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
 
 								<div id="isi-konten"><?= $sqlkonten->isi; ?></div>
 
-								<div align="right"><a href="<?= _URLWEB; ?>" class="button"><span>Ke Beranda</span></a></div>
 
 							</div>
 						</div>
