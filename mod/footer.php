@@ -35,7 +35,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       </div>
 
       <div class="col-md-3 col-sm-12" data-aos="fade-down">
-        <h4 class="topicof text-white" style="font-size: 20px;margin-left: 1em;background: url('img/icopadf.png') no-repeat left;">TVRI Sumbar</h4>
+        <h4 class="topicof text-white" style="font-size: 20px;margin-left: 1em;background: url('img/icopadf.png') no-repeat left;"> &nbsp; &nbsp; TVRI Sumbar</h4>
         <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-block">
           <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>tentang#sejarah" class="text-white">Sejarah TVRI Sumbar</a></li>
           <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="<?php echo _URLWEB; ?>tentang#visi" class="text-white">Visi, Misi & Slogan</a></li>
@@ -48,7 +48,7 @@ $profil = $akdb->dbobject("SELECT * FROM " . _TBPROFIL . " ORDER BY id_pf DESC L
       </div>
 
       <div class="col-md-3 col-sm-12" data-aos="fade-down">
-        <h4 class="text-white topicof" style="margin-left: 1em;font-size: 20px;background: url('img/icopadf.png') no-repeat left;">Link Lainnya</h4>
+        <h4 class="text-white topicof" style="margin-left: 1em;font-size: 20px;background: url('img/icopadf.png') no-repeat left;"> &nbsp; &nbsp; Link Lainnya</h4>
         <ul class="site-menu main-menu js-clone-nav mr-auto d-lg-block">
           <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://tvri.go.id" target="_blank" class="text-white">Televisi Republik Indonesia</a></li>
           <li style="font-size: 13px;padding-top: 0px;padding-bottom: 0px;"><a href="http://kominfo.go.id" target="_blank" class="text-white">Kementerian Komunikasi dan Informatika</a></li>
