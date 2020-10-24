@@ -50,6 +50,7 @@ define('_TBPROGRAM', 'programtb');
 define('_TBRATE', 'ratetb');
 define('_TBUTAMA', 'utamatb');
 define('_TBWILAYAH', 'wilayahtb');
+define('_TBCUSTOM', 'customtb');
 
 //konfigurasi lain
 define('_SETIP', $_SERVER['REMOTE_ADDR']);

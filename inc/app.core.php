@@ -342,9 +342,9 @@ class aksesdb
 {
 	function dbconnect($dbhost, $dbuser, $dbpass, $dbname)
 	{
-		$dbconn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Koneksi Database Error : ' . mysql_error());
+		@$dbconn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Koneksi Database Error : ' . mysql_error());
 		if ($dbconn) {
-			mysql_select_db($dbname) or die('Penggunaan Database Error : ' . mysql_error());
+			@mysql_select_db($dbname) or die('Penggunaan Database Error : ' . mysql_error());
 		}
 		return $dbconn;
 	}

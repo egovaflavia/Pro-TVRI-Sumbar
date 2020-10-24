@@ -26,13 +26,23 @@ if (file_exists($atas)) {
 <?php
 $program = $akdb->dbquery("SELECT * FROM programtb");
 $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
+$dataWarna = "";
+$dataWarna = array(
+  'jadwaltv' => mysql_fetch_assoc($akdb->dbquery("SELECT * FROM `customtb` WHERE `custom_id` = '1'")),
+  'program' => mysql_fetch_assoc($akdb->dbquery("SELECT * FROM `customtb` WHERE `custom_id` = '2'")),
+  'news' => mysql_fetch_assoc($akdb->dbquery("SELECT * FROM `customtb` WHERE `custom_id` = '3'")),
+  'follow' => mysql_fetch_assoc($akdb->dbquery("SELECT * FROM `customtb` WHERE `custom_id` = '4'")),
+  'lokasi' => mysql_fetch_assoc($akdb->dbquery("SELECT * FROM `customtb` WHERE `custom_id` = '5'")),
+);
+
+// var_dump($dataWarna);
+// exit;
 
 ?>
 
 <?php include 'mod/header.php' ?>
 
 <body>
-
   <?php include 'mod/menudkk.php' ?>
 
   <section>
@@ -54,7 +64,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- End Slider -->
 
   <!-- Jadwal TV -->
-  <section id="jadwal" class="site-section">
+  <section id="jadwal" style="background-color: <?= $dataWarna['jadwaltv']['custom_kode'] ?>;" class="site-section">
     <div class="container">
       <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-lg-6 text-center heading-section mb-5">
@@ -201,7 +211,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- Jadwal TV -->
 
   <!-- Program Slide -->
-  <section class="site-section bg-light block-13" id="testimonials-section" data-aos="fade">
+  <section id="program" style="background-color: <?= $dataWarna['program']['custom_kode'] ?>;" class="site-section bg-light block-13" id="testimonials-section" data-aos="fade">
     <div class="container">
 
       <div class="row justify-content-center" data-aos="fade-up">
@@ -257,7 +267,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- Program Slide -->
 
   <!-- News -->
-  <section class="bg-white site-section block-13" id="testimonials-section" data-aos="fade">
+  <section id="news" style="background-color: <?= $dataWarna['news']['custom_kode'] ?>;" class="bg-white site-section block-13" id="testimonials-section" data-aos="fade">
     <div class="container">
 
       <div class="row justify-content-center" data-aos="fade-up">
@@ -333,7 +343,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- News -->
 
   <!-- Instagram -->
-  <section style="width: 100%;height: auto; background-repeat: no-repeat; background-size:100% 100%;background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/instagramBg.png');" class="site-section">
+  <section id="follow" style="background-color: <?= $dataWarna['follow']['custom_kode'] ?>;width: 100%;height: auto; background-repeat: no-repeat; background-size:100% 100%;background-image: url('<?php echo _URLWEB; ?>cssMediatama/images/instagramBg.png');" class="site-section">
     <div class="row justify-content-center" data-aos="fade-up">
       <div class="col-lg-6 text-center heading-section mb-5">
         <h2 class="text-black mb-2">Follow Instagram Kami</h2>
@@ -348,7 +358,7 @@ $slider = $akdb->dbquery("SELECT * FROM utamatb WHERE status = '1'");
   <!-- Instagram -->
 
   <!-- Map -->
-  <section class="site-section">
+  <section id="lokasi" style="background-color: <?= $dataWarna['lokasi']['custom_kode'] ?>;" class="site-section">
     <div class="row justify-content-center" data-aos="fade-up">
       <div class="col-lg-6 text-center heading-section mb-3">
         <h2 class="text-black">Lokasi Kami</h2>

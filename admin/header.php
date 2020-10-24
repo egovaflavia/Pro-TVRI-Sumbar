@@ -149,6 +149,7 @@ if($mod == "program" && ($act == "" || $act == "update" || $act == "simpan")) {
         <li <?php if($mod == "photo") { echo"class=active"; } ?>><a href="<?=_URLWEB;?>admin.php?admin=apps&mod=photo"><i class="icon-picture"></i><span>Galeri Foto</span> </a></li>
         <li <?php if($mod == "informasi") { echo"class=active"; } ?>><a href="<?=_URLWEB;?>admin.php?admin=apps&mod=agenda"><i class="icon-table"></i><span>Agenda Kegiatan</span> </a> </li>
         <li <?php if($mod == "message") { echo"class=active"; } ?>><a href="<?=_URLWEB;?>admin.php?admin=apps&mod=message"><i class="icon-envelope"></i><span>Kritik &amp; Saran</span> </a> </li>
+        <li <?php if($mod == "custom") { echo"class=active"; } ?>><a href="<?=_URLWEB;?>admin.php?admin=apps&mod=custom"><i class="icon-puzzle-piece"></i><span>Custom</span> </a> </li>
       </ul>
     </div>
     <!-- /container --> 
