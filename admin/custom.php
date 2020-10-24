@@ -367,8 +367,6 @@ if ((isset($_SESSION['uname'])) and ($_SESSION['typea']) and ($_SESSION['pword']
                 </div>
                 <!-- /widget-content -->
                 <br />
-                <div><a href="<?= _URLWEB; ?>admin.php?admin=apps&mod=custom&act=tambah"><button class="btn btn-github-alt"><i class="icon-plus-sign"></i> Entry Data Foto</button></a></div>
-                <br />
                 <div align="center"><?= $pagination; ?></div>
 
               </div>
